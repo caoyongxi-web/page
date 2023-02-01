@@ -1,0 +1,99 @@
+#jj
+#sy
+#xm
+#lx
+    body{  
+            animation: fadeInAnimation ease 6s; 
+                animation-iteration-count: 1; /*设置动画播放次数*/
+                animation-fill-mode: forwards; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
+            } 
+            @keyframes fadeInAnimation { 
+                0% { 
+                    opacity: 0; /*设置不透明度*/
+                } 
+                100% { 
+                    opacity: 1; 
+                } 
+            } 
+    body {
+        font-family: "Lato", sans-serif;
+        transition: .5s;
+    }
+     
+    /*侧边栏选择器*/
+    .sidenav {
+        height: 100%;
+        width: 0; /*原始宽度*/
+        position: fixed;
+        /*z-index、top、left共同控制侧栏的悬浮（上方1，下方-1）*/
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: black;
+        overflow-x: hidden;
+        transition: .75s; /*侧栏延迟0.5s显示*/
+        padding-top: 60px;
+    }
+     
+    /*侧边栏标签选择器*/
+    .sidenav a {
+        padding:12px 12px 8px 70px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #9f4e4e;
+        display: block;
+        transition: 0.3s; /*标签延迟0.3s显示*/
+        
+    }
+     
+    /*侧栏标签和关闭按钮光标的效果*/
+    .sidenav a:hover, .offcanvas a:focus{
+        color: #f1f1f1;
+    }
+     
+    /*侧栏和关闭按钮的位置选择器*/
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+     
+    /*主体内容
+    #main {
+        transition: margin-left 0.5s;
+    }(主体内容延迟0.5s整体y右移动)*/
+    
+    /*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+.yjbk  {text-align:center;
+
+border:2px solid #a1a1a1;
+
+padding:80px 40px; 
+
+width:150px;
+
+border-radius:25px;
+
+-moz-border-radius:25px; /* 老的 Firefox */
+
+}
+.home-blog-img {
+    width: 100%;
+        /* 图片拉伸以适应内容框 */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .home-blog-card-title {
+    /* 弹性布局 列分布 横轴居中 纵轴居中 */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0;
+  }
